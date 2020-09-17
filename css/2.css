@@ -7512,9 +7512,8 @@ button.bg-dark:focus {
 
 .mb-0,
 .my-0 {
-  color: #fff !important;
   margin-bottom: 0 !important;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 10px;
   -webkit-text-stroke-color: green;
 }
 
@@ -7636,7 +7635,6 @@ button.bg-dark:focus {
 .mb-5,
 .my-5 {
   margin-bottom: 3rem !important;
-  color: rgb(218, 218, 218) !important;
 }
 
 .ml-5,
@@ -10006,7 +10004,7 @@ h3 {
 }
 body {
   padding-top: 3.375rem;
-  color: #ccd3da;
+  color: #6c757d;
   /*hit*/
 }
 
