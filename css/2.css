@@ -21,7 +21,9 @@ background-color: black;
   border-radius: 0.25rem;
   width: 250px;
   background: linear-gradient(0deg,#1b1b1b,#222,#1b1b1b);
+
 }
+
 .card > hr {
   margin-right: 0;
   margin-left: 0;
@@ -103,6 +105,11 @@ justify-content: center;
 align-items: center;
 border-radius: 50%;
 }
+.percent .number h2{
+transition: 0.5s;
+
+
+}
 
 
 
@@ -130,26 +137,30 @@ transform: translate(5px,5px)
 }
 svg circle:nth-child(2)
 {
-stroke-dasharray: 220;
-stroke-dashoffset: 220;
+stroke-dasharray: 440;
+stroke-dashoffset: 440;
 
 
 }
 .card:nth-child(1) svg circle:nth-child(2)
 {
-stroke: #119db6;
+stroke-dashoffset: 44;
+stroke: blue;
 
 
 }
 .card:nth-child(2) svg circle:nth-child(2)
 {
-stroke: #9b0387;
+  stroke-dashoffset: 176;
+stroke: orange;
 
 
 }
+
 .card:nth-child(3) svg circle:nth-child(2)
 {
-stroke: #434636;
+  stroke-dashoffset: 220;
+stroke: red;
 
 
 }
