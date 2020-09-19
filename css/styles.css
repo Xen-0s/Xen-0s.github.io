@@ -67,8 +67,19 @@ body {
   color: #212529;
   text-align: left;
   background-color: #000;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
-
+.container
+{
+position: relative;
+width: 900px;
+display: flex;
+justify-content: space-around;
+background-color: black;
+}
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
@@ -9962,8 +9973,24 @@ h3 {
   }
   body {
     min-width: 992px !important;
+    display:flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background-color: black;
   }
-
+  .container
+  {
+  position: relative;
+  width: 900px;
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  
+  
+  
+  
+  }
   .container {
     min-width: 992px !important;
   }
