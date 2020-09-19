@@ -66,7 +66,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #000;
+  background-color: #000 !important;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -78,7 +78,7 @@ position: relative;
 width: 900px;
 display: flex;
 justify-content: space-around;
-background-color: black;
+background-color: black !important;
 }
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
@@ -585,8 +585,20 @@ pre code {
   padding-left: 0.75rem;
   margin-right: auto;
   margin-left: auto;
+  background-color: black;
 }
+.container
+{
+position: relative;
+width: 900px;
+display: flex;
+justify-content: space-around;
+background-color: black;
 
+
+
+
+}
 @media (min-width: 576px) {
   .container-sm, .container {
     max-width: 540px;
@@ -4353,35 +4365,6 @@ input[type=button].btn-block {
   color: #fff;
 }
 
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
-}
-.card > hr {
-  margin-right: 0;
-  margin-left: 0;
-}
-.card > .list-group {
-  border-top: inherit;
-  border-bottom: inherit;
-}
-.card > .list-group:first-child {
-  border-top-width: 0;
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px);
-}
-.card > .list-group:last-child {
-  border-bottom-width: 0;
-  border-bottom-right-radius: calc(0.25rem - 1px);
-  border-bottom-left-radius: calc(0.25rem - 1px);
-}
 
 .card-body {
   flex: 1 1 auto;
