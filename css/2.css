@@ -1,6 +1,7 @@
 body
 {
 display:flex;
+
 justify-content: left;
 align-items: left;
 min-height: 100vh;
@@ -48,6 +49,8 @@ background-color: black;
 position: relative;
 width: 900px;
 display: flex;
+  flex-direction: column;
+
 justify-content: space-around;
 }
 .container .card{
@@ -143,14 +146,14 @@ stroke-dashoffset: 440;
 
 }
 .card:nth-child(1) svg circle:nth-child(2)
-{
+{order:1;
 stroke-dashoffset: 44;
 stroke: blue;
 
 
 }
 .card:nth-child(2) svg circle:nth-child(2)
-{
+{order:2;
   stroke-dashoffset: 176;
 stroke: orange;
 
@@ -159,6 +162,7 @@ stroke: orange;
 
 .card:nth-child(3) svg circle:nth-child(2)
 {
+  order:3;
   stroke-dashoffset: 220;
 stroke: red;
 
