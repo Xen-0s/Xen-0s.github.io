@@ -188,7 +188,7 @@ stroke: orange;
 .card:nth-child(5) svg circle:nth-child(2)
 {order:2;
   stroke-dashoffset: 176;
-stroke: orange;
+stroke: red;
 
 
 }
