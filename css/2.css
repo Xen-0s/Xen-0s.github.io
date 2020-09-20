@@ -157,7 +157,7 @@ stroke-dashoffset: 440;
 
 
 }
-.card:nth-child(2) svg circle:nth-child(2)
+.card:nth-child(1) svg circle:nth-child(2)
 {order:1;
 stroke-dashoffset: 44;
 stroke: blue;
