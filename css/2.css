@@ -111,11 +111,23 @@ border-radius: 50%;
 .percent .number h2{
 transition: 0.5s;
 
+}
+.text{
+position: relative;
+color: #777;
+
+letter-spacing: 1px;
+text-transform: uppercase;
+transition: 0.5s;
 
 }
+.card:hover .text{
+
+color: #fff;
 
 
 
+}
 svg
 {
 position: relative;
@@ -152,7 +164,7 @@ stroke: green;
 
 
 }
-.card:nth-child(2) svg circle:nth-child(2)
+.card:nth-child(3) svg circle:nth-child(2)
 {order:2;
   stroke-dashoffset: 176;
 stroke: orange;
@@ -160,7 +172,7 @@ stroke: orange;
 
 }
 
-.card:nth-child(3) svg circle:nth-child(2)
+.card:nth-child(5) svg circle:nth-child(2)
 {
   order:3;
   stroke-dashoffset: 220;
