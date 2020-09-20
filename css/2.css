@@ -197,15 +197,15 @@ stroke: orange;
 {
   order:3;
   stroke-dashoffset: 220;
-stroke: red;
+stroke: blanchedalmond;
 
 
 }
 .card:nth-child(7) svg circle:nth-child(2)
 {
   order:3;
-  stroke-dashoffset: 308;
-stroke: red;
+  stroke-dashoffset: 176;
+stroke: orange;
 
 
 }
@@ -220,7 +220,7 @@ stroke: red;
 .card:nth-child(9) svg circle:nth-child(2)
 {
   order:3;
-  stroke-dashoffset: 308;
+  stroke-dashoffset: 220;
 stroke: red;
 
 
