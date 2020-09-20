@@ -164,6 +164,13 @@ stroke: blue;
 
 
 }
+.card:nth-child(2) svg circle:nth-child(2)
+{order:1;
+stroke-dashoffset: 44;
+stroke: blue;
+
+
+}
 .card:nth-child(3) svg circle:nth-child(2)
 {order:1;
 stroke-dashoffset: 88;
