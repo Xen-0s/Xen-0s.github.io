@@ -1,33 +1,19 @@
-/*inspired by https://www.jacopocolo.com/hexclock/*/
-
-<html>
 <head>
+    <!--inspired by https://www.jacopocolo.com/hexclock/-->
+
 <script language="JavaScript">
 function gettime() {
     var date= new Date();
     var h = date.getHours();
     var m = date.getMinutes();
     var s = date.getSeconds();
-    if(h < 10)
-    {
-        h = "0" + h;
-    }
-    if(m < 10)
-    {
-        m = "0" + m;
-    }
-    if(s < 10)
-    {
-        s = "0" + s;
-    }
-    himprov = h /100 *255;
-    mimprov = h /60 *255;
-    simprov = h /60 *255;
-    valbg ="#" + hr + "" + m + "" + s;
-    valbgimprov ="#" + hrimprov + "" + mimprov + "" + simprov;
-    document.getElementById("divclock").innerHTML = valbgimprov;
+var h = h /24*255;
+var m = m /60*255;
+var s = s /60*255;
+var valbg ="#" + parseInt(h).toString(16)+parseInt(m).toString(16)+parseInt(s).toString(16);
+    document.getElementById("divclock").innerHTML =valbg;
     setTimeout("gettime()",100)
-    document.body.style.backgroundColor = valbgimprov;
+    document.body.style.backgroundColor = valbg;
 
 }
 </script>

@@ -1,7 +1,7 @@
-<!--inspired by https://www.jacopocolo.com/hexclock/-->
-
 <html>
 <head>
+    <!--inspired by https://www.jacopocolo.com/hexclock/-->
+
 <script language="JavaScript">
 function gettime() {
     var date= new Date();
@@ -10,17 +10,17 @@ function gettime() {
     var s = date.getSeconds();
     if(h < 10)
     {
-        h = "0" + h;
+        h = "0" + h
     }
     if(m < 10)
     {
-        m = "0" + m;
+        m = "0" + m
     }
     if(s < 10)
     {
-        s = "0" + s;
+        s = "0" + s
     }
-    valbg ="#" + hr + "" + m + "" + s;
+    valbg ="#" + h + "" + m + "" + s;
     document.getElementById("divclock").innerHTML = valbg;
     setTimeout("gettime()",100)
     document.body.style.backgroundColor = valbg;
