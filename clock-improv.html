@@ -1,4 +1,4 @@
-<!--inspired by https://www.jacopocolo.com/hexclock/-->
+/*inspired by https://www.jacopocolo.com/hexclock/*/
 
 <html>
 <head>
@@ -20,10 +20,14 @@ function gettime() {
     {
         s = "0" + s;
     }
+    himprov = h /100 *255;
+    mimprov = h /60 *255;
+    simprov = h /60 *255;
     valbg ="#" + hr + "" + m + "" + s;
-    document.getElementById("divclock").innerHTML = valbg;
+    valbgimprov ="#" + hrimprov + "" + mimprov + "" + simprov;
+    document.getElementById("divclock").innerHTML = valbgimprov;
     setTimeout("gettime()",100)
-    document.body.style.backgroundColor = valbg;
+    document.body.style.backgroundColor = valbgimprov;
 
 }
 </script>
