@@ -12,11 +12,12 @@
                 this.echo('Hello, ' + what +
                           '. Welcome to this terminal.');
             }
+            
         }, {
             greetings: 'My First Terminal'
         });
         $('body').terminal({
-            ls: function(what) {
+            ls: function() {
                 this.echo('Dir listing');
             }
         }, {
