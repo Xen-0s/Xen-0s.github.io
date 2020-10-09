@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178267214-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-178267214-1');
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('textarea').on('keydown', function(e){
+    var qwertyup = "qwertyuiop[]";
+    var qwertymid = "asdfghjkl;'";
+    var qwertydown = "<zxcvbnm,./";
+    var dvorakup = ";,.pyfgcrl/@";
+    var dvorakmid = "aoeuidhtns-";
+    var dvorakdown = "<'qjkxbmwvz";
+
+
+      e.preventDefault();
+      $( ".inner" ).append(dvorakup[qwertyup.indexOf(String.fromCharCode(e.keyCode).toLowerCase())]);
+      $( ".inner" ).append(dvorakmid[qwertymid.indexOf(String.fromCharCode(e.keyCode).toLowerCase())]);
+      $( ".inner" ).append(dvorakdown[qwertydown.indexOf(String.fromCharCode(e.keyCode).toLowerCase())]);
+});
+});
+
+</script>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Efe Yakar</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+        <link rel="manifest" href="assets/img/site.webmanifest">
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/2.css" rel="stylesheet" /> 
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
+    
+        
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <div class="container-fluid p-0">
+        <div>What you type below comes out as P-DVORAK layout</div>
+        
+        <textarea class="inner" ></textarea>
+      </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
