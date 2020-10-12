@@ -257,3 +257,11 @@ stroke: red;
 
 
 }
+.card:nth-child(14) svg circle:nth-child(2)
+{
+  order:3;
+  stroke-dashoffset: 308;
+stroke: red;
+
+
+}
