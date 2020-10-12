@@ -14,23 +14,59 @@
 <script>
 $(document).ready(function(){
   $('textarea').on('keydown', function(e){
+    var qwertynum = "1234567890-=";
     var qwertyup = "qwertyuiop[]";
     var qwertymid = "asdfghjkl;'";
     var qwertydown = "<zxcvbnm,./";
+    var dvoraknum = "&[{}(=*)+]";
     var dvorakup = ";,.pyfgcrl/@";
-    var dvorakmid = "aoeuidhtns-";
-    var dvorakdown = "<'qjkxbmwvz";
+    var dvorakmid = "aoeuidhtns-\\";
+    var dvorakdown = "<'qjkxbmwvz'>";
 
 
       e.preventDefault();
+      console.log(e.keyCode);
+      if (e.keyCode==8){
+        a = $('.inner').clone();
+        asd = a.text()
+        console.log(asd);
+        asd = asd.slice(0,-1);
+        $('.inner').text(asd);
+      }
+      $( ".inner" ).append(dvoraknum[qwertynum.indexOf(String.fromCharCode(e.keyCode).toLowerCase())]);
+
       $( ".inner" ).append(dvorakup[qwertyup.indexOf(String.fromCharCode(e.keyCode).toLowerCase())]);
       $( ".inner" ).append(dvorakmid[qwertymid.indexOf(String.fromCharCode(e.keyCode).toLowerCase())]);
       $( ".inner" ).append(dvorakdown[qwertydown.indexOf(String.fromCharCode(e.keyCode).toLowerCase())]);
+      checkTrue()
 });
 });
+
+var words = new Array('ousts','oat','huts','tutu','aunt','stout','ant','seats','nets','neath','noose','neat','nosh','out','noes','hoots','oases','tens','tho','thus','stone','too','huh','east','notes','uses','that','ethos','those','ants','nun','shuts','onus','stunt','nut','teats','hes','hunt','stun','nuts','tout','see','sane','seas','sots','tote','eta','taunt','taste','oust','hat','shoes','hate','teas','tune','haunt','sue','nouns','oho','shut','sat','tenth','tense','tone','ate','thees','onset','sheen','then','hoses','souse','one','teat','hose','hush','stats','sooth','teens','hates','ohs','nose','host','oaths','ease','eon','hens','tunas','state','seat','hone','non','nth','south','tan','shun','test','stuns');
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+function myFunction() {
+
+  $( ".aim" ).text(words[getRandomInt(words.length)]);
+}
+function checkTrue() {
+  a = $('.aim').clone();
+
+  b = $('.inner').clone();
+console.log( b.text() );
+if(b.text()==a.text()){
+  console.log('asdasdasd');
+  $(".inner").text("")
+  var num = parseInt($('.counter').text());
+  $('.counter').text(num+1);
+  myFunction();
+
+}
+
+}
 
 </script>
-
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
@@ -55,9 +91,16 @@ $(document).ready(function(){
     <body id="page-top">
         <!-- Navigation-->
         <div class="container-fluid p-0">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/KB_United_States_Dvorak.svg/800px-KB_United_States_Dvorak.svg.png"/>
+        <div class="aim">HEY</div>
         <div>What you type below comes out as P-DVORAK layout</div>
         
         <textarea class="inner" ></textarea>
+        <br>
+        <button onclick="myFunction()">Click me</button>
+        
+        
+        <div class="counter">0</div>
       </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
