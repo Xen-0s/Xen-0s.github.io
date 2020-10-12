@@ -265,3 +265,11 @@ stroke: red;
 
 
 }
+.card:nth-child(15) svg circle:nth-child(2)
+{
+  order:3;
+  stroke-dashoffset: 308;
+stroke: red;
+
+
+}
