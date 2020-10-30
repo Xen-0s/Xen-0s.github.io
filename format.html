@@ -143,10 +143,172 @@
             {
                 editAreaLoader.execCommand(id, 'set_editable', !editAreaLoader.execCommand(id, 'is_editable'));
             }
+            function adder(line,charnum,lookfor){
+                //parameters:(line,charnum,lookfor)
+                console.log(line[charnum]);
+                console.log(lookfor);
+                if (lookfor != line[charnum]){
+                    console.log("not same");
+                    line = line.slice(0,charnum+1) + lookfor + line.slice(charnum+1);
+                    
+                }
+                else{
+                    console.log("same dud");
+                }
+                return(line);
+
+            }
+            function substracter(line,charnum,lookfor){                
+                console.log(line[charnum]);
+                console.log(lookfor);
+                if (lookfor != line[charnum]){
+                    console.log("not same");
+                    line = line.slice(0,charnum+1) + lookfor + line.slice(charnum+1);
+                    
+                }
+                else{
+                    console.log("same dud");
+                }
+                return(line);
+                
+            }
+            function spaceCheck(tabNum){
+
+
+
+
+            }
+            function varCheck(tabNum){
+
+
+
+
+}
             function myFunction() {
                 
                 
+                var codeIn = ($(".inner").val());
+                console.log(codeIn);
+                const splitLines = str => str.split(/\r?\n/);
+                var splitted = splitLines(codeIn);
+                var currentLine = 0;
+                var currentChar = 0;
+                var tabNum = 0;
+                var isNotInPar = true;
+                var neededChar = "";
+                for (currentLine = 0;currentLine < Object.keys(splitted).length; currentLine++){
 
+                    while (currentChar < splitted[currentLine].length){
+                        //console.log(splitted[currentLine]);
+
+                        if (splitted[currentLine][currentChar] == "=" && isNotInPar){
+                            neededChar = " ";
+                            if(splitted[currentLine][currentChar+1] == "="){
+                                splitted[currentLine] = adder(splitted[currentLine],currentChar-1,neededChar);
+                            }
+                            else if(splitted[currentLine][currentChar-1] == "="){
+                                splitted[currentLine] = adder(splitted[currentLine],currentChar,neededChar);
+                            }
+
+                            else if(splitted[currentLine][currentChar-1] == "!" || splitted[currentLine][currentChar-1] == "<" || splitted[currentLine][currentChar-1] == ">" ){
+                                splitted[currentLine] = adder(splitted[currentLine],currentChar-2,neededChar);
+
+                                splitted[currentLine] = adder(splitted[currentLine],currentChar+1,neededChar);
+                            }
+                            else{
+                                splitted[currentLine] = adder(splitted[currentLine],currentChar-1,neededChar);
+                                splitted[currentLine] = adder(splitted[currentLine],currentChar+1,neededChar);
+
+                            }
+
+
+                            
+                        }
+                        if (splitted[currentLine][currentChar] == "("){
+                            neededChar = " ";
+                            splitted[currentLine] = adder(splitted[currentLine],currentChar-1,neededChar);
+                            isNotInPar = false;
+                        }
+                        if (splitted[currentLine][currentChar] == ")"){
+                            neededChar = " ";
+                            splitted[currentLine] = adder(splitted[currentLine],currentChar,neededChar);
+                            isNotInPar = true;
+                        }
+                        if (splitted[currentLine][currentChar] == ","&& isNotInPar){
+                            neededChar = " ";
+                            splitted[currentLine] = adder(splitted[currentLine],currentChar,neededChar);
+                            //When I wrote this, only God and I understood what I was doing
+                            //Now, God only knows
+   
+                        }
+
+                        if (splitted[currentLine][currentChar] == "+"&& isNotInPar){
+                            neededChar = " ";
+                            if(splitted[currentLine][currentChar+1] == "+"){
+                                splitted[currentLine] = adder(splitted[currentLine],currentChar-1,neededChar);
+                            }
+                            else if(splitted[currentLine][currentChar-1] == "+"){
+                                splitted[currentLine] = adder(splitted[currentLine],currentChar,neededChar);
+                            }
+
+
+
+
+                            
+                        }
+
+                        if (splitted[currentLine][currentChar] == "-"&& isNotInPar){
+                            neededChar = " ";
+                            if(splitted[currentLine][currentChar+1] == "-"){
+                                splitted[currentLine] = adder(splitted[currentLine],currentChar-1,neededChar);
+                            }
+                            else if(splitted[currentLine][currentChar-1] == "-"){
+                                splitted[currentLine] = adder(splitted[currentLine],currentChar,neededChar);
+                            }
+
+
+
+
+                            
+                        }
+                        if (splitted[currentLine][currentChar] == "/" || splitted[currentLine][currentChar] == "*"&& isNotInPar){
+                            neededChar = " ";
+                            splitted[currentLine] = adder(splitted[currentLine],currentChar-1,neededChar);  
+                            splitted[currentLine] = adder(splitted[currentLine],currentChar,neededChar);  
+
+                        }
+
+                        if (splitted[currentLine][currentChar] == "{"&& isNotInPar){
+                            neededChar = "\n";
+                            tabNum++;
+                            splitted[currentLine] = adder(splitted[currentLine],currentChar-1,neededChar);
+                        }
+                        if (splitted[currentLine][currentChar] == "}"&& isNotInPar){
+                            neededChar = "\n";
+                            tabNum--;
+                            splitted[currentLine] = adder(splitted[currentLine],currentChar-1,neededChar);
+                        }
+
+                        //console.log(splitted[currentLine][currentChar]);
+
+                        currentChar++;
+                    }
+/*It might not be good practice to leave these FIX commnets, 
+but they greatly reflect my emotions*/
+//; end line if not in () /fixed for all/
+// add user options for)
+//var name checker
+//constant UPPERCASE
+//most importantly indenter
+//press f for the hours ahead
+//F
+//{ unless in '' or ""
+//OOF
+                }
+                //console.log('hit');
+                var x = splitted.join('\n');
+                console.log(x);
+                $('#example_1').val(x);
 
 
 
@@ -219,9 +381,10 @@
         <!-- Navigation-->
         <div class="aim">HEY</div>
 
-        <textarea id="example_1" style="height: 350px; width: 100%;" name="test_1"></textarea>
+        <textarea  class="inner" id="example_1" style="height: 350px; width: 100%;" name="test_1"></textarea>
         <button class="raise" onclick="myFunction()">Click me</button>
-
+        <div></div>
+        <textarea id="myTextarea" name="something">This text gets removed</textarea>
         <!-- Bootstrap core JS-->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
