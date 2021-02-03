@@ -1,0 +1,47 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+body{display: flex; align-items: center; justify-content: center; height: 100vh; background: #000000; top: +24px; font-family: Arial, Helvetica, sans-serif; color: #fff;}
+.box1{ position: relative; width: 300px; height: 500px; display: flex; justify-content: center; align-content: center; background-image: url("assets/ports/Port1.png"); padding:25px;transform: skewX(-20deg);    z-index: 1;} 
+.box1:before{ content: ''; position: absolute; top: +24px; bottom: -28px; left: -53px; right: +47px; z-index: -1;display: inline-block;    opacity: 0;
+  transition: opacity 0.3s ease-out; background: linear-gradient(235deg, #00a6d8, transparent, green);display: inline-block;}
+.box1:after{ content: ''; position: absolute; top: -2px; bottom: -28px; left: -54px; right: +47px; z-index: -1; filter: blur(40px);display: inline-block;    opacity: 0;
+  transition: opacity 0.3s ease-out; background: linear-gradient(235deg, #00a6d8, transparent, green);display: inline-block;}
+.box1:hover:before, .box1:hover:after{opacity: 1;}
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+.box2{ position: relative; width: 300px; height: 500px; display: flex; justify-content: center; align-content: center; background-image: url("assets/ports/Port2.png"); padding:25px;transform: skewX(-20deg);    z-index: 1;} 
+.box2:before{ content: ''; position: absolute; top: +24px; bottom: -28px; left: -53px; right: +47px; z-index: -1;display: inline-block;    opacity: 0;
+  transition: opacity 0.3s ease-out; background: linear-gradient(235deg, red, transparent, green);display: inline-block;}
+.box2:after{ content: ''; position: absolute; top: -2px; bottom: -28px; left: -54px; right: +47px; z-index: -1; filter: blur(40px);display: inline-block;    opacity: 0;
+  transition: opacity 0.3s ease-out; background: linear-gradient(235deg, red, transparent,green);display: inline-block;}
+.box2:hover:before, .box2:hover:after{opacity: 1;}
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+.box3{ position: relative; width: 300px; height: 500px; display: flex; justify-content: center; align-content: center; background-image: url("assets/ports/Port3.png"); padding:25px;transform: skewX(-20deg);    z-index: 1;} 
+.box3:before{ content: ''; position: absolute; top: +24px; bottom: -28px; left: -53px; right: +47px; z-index: -1;display: inline-block;    opacity: 0;
+  transition: opacity 1s ease-out; background: linear-gradient(235deg, yellow, transparent, green);display: inline-block;}
+.box3:after{ content: ''; position: absolute; top: -2px; bottom: -28px; left: -54px; right: +47px; z-index: -1; filter: blur(40px);display: inline-block;    opacity: 0;
+  transition: opacity 1s ease-out; background: linear-gradient(235deg, yellow, transparent, green);display: inline-block;}
+.box3:hover:before, .box3:hover:after{opacity: 1;}
+img {
+  transition: filter .5s ease-in-out;
+  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(100%); /* FF 35+ */
+}
+
+img:hover {
+  -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(0%); /* FF 35+ */
+
+}
+#left{
+  float: left;
+  margin-right: 90px;
+}
+#mid{
+float: left;
+float: right;
+}
+#right{
+ float: left;
+ margin-left: 90px;
+}
