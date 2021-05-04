@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+        body {
+            height: 100%;
+            width: 75%;
+        }
+    </style>
+
+    <script>
+        //if you want to access files locally, just make urlBase = ""
+        //This might cause a problem since the browser gives CORS error: access-control-allow-origin
+        var urlBase = "https://efeyakar.com/TPFiles/";
+        function getLocation() {
+            var idx = document.URL.indexOf('?');
+            return  urlBase + document.URL.substring(idx+5,) + "/" +document.URL.substring(idx+5,) + ".xml"
+        }
+
+
+        function firstRun(){
+            var toFetch = getLocation();
+
+            downloadUrl(toFetch , function(data) {
+                console.log(toFetch)
+                var xml = data.responseXML;
+                setData(xml)
+
+            });
+        };
+
+        function setData(xml){
+            var infoData = xml.documentElement.getElementsByTagName('location')
+            //sets title
+
+            document.getElementById("name").innerHTML = infoData[0].getAttribute('name')
+
+
+            //sets img
+            var img = document.createElement("img");
+
+            img.src = urlBase + infoData[0].getAttribute('id') + "/" + infoData[0].getAttribute('photo')
+            console.log(img.src)
+            document.getElementById("general").appendChild(img);
+
+            var about  = document.createElement("div");
+            about.textContent = infoData[0].getAttribute('about');
+            document.getElementById("general").appendChild(img);
+            document.getElementById("general").appendChild(about);
+        }
+
+        /*
+        * This part is from the documentation*/
+        function downloadUrl(url, callback) {
+            console.log(url)
+            var request = window.ActiveXObject ?
+                new ActiveXObject('Microsoft.XMLHTTP') :
+                new XMLHttpRequest;
+
+            request.onreadystatechange = function() {
+                if (request.readyState == 4) {
+                    request.onreadystatechange = doNothing;
+                    callback(request, request.status);
+                }
+            };
+
+            request.open('GET', url, true);
+            request.send(null);
+        }
+        function doNothing(){}
+    </script>
+</head>
+<body onload="firstRun()">
+<h1 id="name"></h1>
+<div id = "general">
+</div>
+
+</body>
+</html>
