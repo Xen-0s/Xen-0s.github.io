@@ -1,0 +1,3 @@
+<challengeSets>
+    <challengeSet id="c0" name = "short walk" time = "6000000000" to="l2" from="l1" type = "challenge"/>
+</challengeSets>

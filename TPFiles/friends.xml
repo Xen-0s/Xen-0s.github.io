@@ -1,0 +1,7 @@
+<friends>
+    <friend id="f1" name="Berk" lat="39.87473039036745" lng="32.76216514898325" type = "friend"/>
+    <friend id="f2" name="Efe" lat="39.87" lng="32.76" type = "friend"/>
+    <friend id="f3" name="Izgi" lat="40" lng="32" type = "friend"/>
+    <friend id="f4" name="Ipek" lat="39" lng="33" type = "friend"/>
+
+</friends>

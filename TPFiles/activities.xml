@@ -1,0 +1,7 @@
+<activities>
+    <activity id="a1" name="Festival" lat="39.875694657369166" lng="32.75202477759247" type = "festival" />
+    <activity id="a2" name="Football Match" lat="39" lng="32" type = "sports" />
+    <activity id="a2" name="Sinatra" lat="39.875" lng="32.752" type = "concert" />
+    <activity id="a2" name="Dinner" lat="39.9" lng="32.5" type = "other" />
+    <activity id="a2" name="Shakespeare" lat="40" lng="32.5" type = "theatre" />
+</activities>

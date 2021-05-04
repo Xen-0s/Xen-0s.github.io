@@ -1,0 +1,9 @@
+<markers>
+	<marker id="l1" name="Ee" lat="39.87207999690977" lng="32.750672164973075" type = "academic" />
+	<marker id="l2" name="Lib" lat="39.870330233123944" lng="32.750036942264714" type = "academic"/>
+	<marker id="l3" name="Bus" lat="39.86939151058485" lng="32.74692557983902" type = "bus"/>
+	<marker id="l4" name="Bus" lat="39.865528314071675" lng="32.746150538339585" type = "bus"/>
+	<marker id="l6" name="Bilkent Odeon" lat="39.875566061510234" lng="32.75274164153536" type="academic" />
+	<marker id="l7" name="Rollhouse Bowling - Bilkent Ankuva AVM " lat="39.88467402266341 " lng="32.756205546038984" type = "avm" />
+	<marker id="l8" name="Bilkent Center Theatre" lat="39.884584787240435" lng="32.758521069309225" type="theatreBuild" />
+</markers>
